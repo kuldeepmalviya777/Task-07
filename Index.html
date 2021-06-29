@@ -1,0 +1,132 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="Index.js"></script>
+    <title>Docker Web UI</title>
+
+</head>
+<style>
+    body {background-color: #00ffbf;}
+    h1 {color: black;}
+ 
+
+#button{
+  width: 100px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 8px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#box1{
+  width: 100px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 8px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#box2{
+  width: 100px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 8px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#box3{
+  width: 100px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 8px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#box4{
+  width: 100px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 8px;
+  margin: 4px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#input{
+      width:200px;
+      padding: 10px 15px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-bottom: 2px solid green;
+      color: black;
+ 
+}
+
+
+#output{
+  border-radius: 8px;
+  position: absolute;
+    padding:50px;
+    margin-left: 5px;
+    width: 1300px;
+    height: 475px;
+    background-color: white;
+    font-weight: bolder;
+    color: black;
+    font-size: 20px;
+    font-family: 'Courier New';
+
+}
+
+
+}
+#d1{
+  border-radius: 10px;
+  background-color:#f2f2f2;
+  padding: 50px;
+  width:500px;
+}
+
+  </style>
+
+
+<body>
+
+
+<h1 style="text-align:center;"> Welcome to Docker Engine</h1>
+<div id="d1">
+
+<label for="enter">Enter the Command</label>
+<input id="input" type="text" placeholder="Enter the Docker Command"/>
+
+
+<button id="button" onclick="backend()">Enter</button>
+
+
+</div>
+<div id="box1"> <button id="btn1" value="docker images" onclick="backend1()">docker images</button></div>
+<div id="box2"><button id="btn2" value="docker ps -a" onclick="backend2()">Running Containers</button></div>
+<div id="box3"><button id="btn3" value="docker pull centos:latest" onclick="backend3()">Download the Image</button></div>
+<div id="box4"><button id="btn4" value="docker run -itd --name=MYOS1 centos:latest" onclick="backend4()">Launch the Container</button></div>
+
+
+<pre>
+<div id="output"></div>
+</pre>
+</body>
+</html> 
+
